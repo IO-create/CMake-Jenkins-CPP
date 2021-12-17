@@ -37,7 +37,7 @@ pipeline {
                             } else {
                                 // Perform Linux related build task
                             sh 'chmod +x build.sh'
-                            sh './build.sh Debug'
+                            sh 'bash build.sh'
                             archiveArtifacts artifacts: 'build/Linux/aarch64/source/App/*', fingerprint: true
                             }
                         }
